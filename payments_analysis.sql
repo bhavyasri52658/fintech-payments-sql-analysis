@@ -1,3 +1,27 @@
+-- Create the payments table
+CREATE TABLE payments (
+    payment_id INT PRIMARY KEY,
+    customer_name VARCHAR(50),
+    payment_method VARCHAR(30),
+    amount DECIMAL(10,2),
+    status VARCHAR(20),
+    payment_date DATE
+);
+
+-- Insert sample transaction data
+INSERT INTO payments
+    (payment_id, customer_name, payment_method, amount, status, payment_date)
+VALUES
+    (1, 'Ananya', 'UPI', 500, 'Success', '2026-10-01'),
+    (2, 'Rahul', 'Card', 1200, 'Failed', '2026-10-01'),
+    (3, 'Priya', 'UPI', 800, 'Success', '2026-10-02'),
+    (4, 'Arjun', 'Net Banking', 1500, 'Pending', '2026-10-02'),
+    (5, 'Sneha', 'Card', 700, 'Failed', '2026-10-03'),
+    (6, 'Ananya', 'UPI', 900, 'Success', '2026-10-03'),
+    (7, 'Rahul', 'Card', 400, 'Success', '2026-10-04'),
+    (8, 'Priya', 'UPI', 2000, 'Failed', '2026-10-04'),
+    (9, 'Arjun', 'Net Banking', 600, 'Success', '2026-10-05'),
+    (10, 'Sneha', 'Card', 1100, 'Success', '2026-10-05');
 
 -- FinTech Payments & Transaction Analysis
 -- Database: PostgreSQL
